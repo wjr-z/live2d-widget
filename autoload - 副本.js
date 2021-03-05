@@ -17,7 +17,7 @@ function loadExternalResource(url, type) {
 		if (tag) {
 			tag.onload = () => resolve(url);
 			tag.onerror = () => reject(url);
-			document.head.appendChild(tag);
+			document.body.appendChild(tag);
 		}
 	});
 }
